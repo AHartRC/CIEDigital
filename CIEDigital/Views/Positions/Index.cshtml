@@ -1,0 +1,62 @@
+﻿@model PagedSearchViewModel<PlayerPosition>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>NFL Player Positions</h2>
+
+<div class="row">
+    @using (Html.BeginForm("Index", "Positions", FormMethod.Post, new { @class = "form-horizontal" }))
+    {
+        @Html.EditorFor(m => m.SearchCriteria)
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary">Apply Filters</button>
+            </div>
+        </div>
+        <hr />
+    }
+</div>
+
+<div class="row">
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    @Html.GetPager(Model.Data, Request.RawUrl)
+    <table class="table table-striped">
+        <tr>
+            <th>
+                <a href="@Html.GetSortingUrl(Model.Data, p => p.ID, Request.RawUrl)">ID</a>
+            </th>
+            <th>
+                <a href="@Html.GetSortingUrl(Model.Data, p => p.ShortName, Request.RawUrl)">Short Name</a>
+            </th>
+            <th>
+                <a href="@Html.GetSortingUrl(Model.Data, p => p.Name, Request.RawUrl)">Name</a>
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.Data)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ID)
+                </td>
+                <td>
+                    @item.ShortName.HighlightKeyWords(Model.SearchCriteria.OfType<TextSearch>().First().SearchTerm)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.EncryptedActionLink("Edit", "Edit", "Positions", new { id = item.ID }, new { @class = "btn btn-link" }) |
+                    @Html.EncryptedActionLink("Details", "Details", "Positions", new { id = item.ID }, new { @class = "btn btn-link" }) |
+                    @Html.EncryptedActionLink("Delete", "Delete", "Positions", new { id = item.ID }, new { @class = "btn btn-link" })
+                </td>
+            </tr>
+        }
+    </table>
+    @Html.GetPager(Model.Data, Request.RawUrl)
+</div>

@@ -1,0 +1,87 @@
+﻿@model PagedSearchViewModel<GameResult>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>NFL Game Results</h2>
+
+<div class="row">
+    @using (Html.BeginForm("Index", "GameResults", FormMethod.Get, new { @class = "form-horizontal" }))
+    {
+        @Html.EditorFor(m => m.SearchCriteria)
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary">Apply Filters</button>
+            </div>
+        </div>
+        <hr />
+    }
+</div>
+
+<div class="row">
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    @Html.GetPager(Model.Data, Request.RawUrl)
+    <table class="table">
+        <tr>
+            <th>
+               Away Team
+            </th>
+            <th>
+                Home Team
+            </th>
+            <th>
+                Away Score
+            </th>
+            <th>
+                Home Score
+            </th>
+            <th>
+                Kick Off
+            </th>
+            <th>
+                Season
+            </th>
+            <th>
+                Week
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.Data)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AwayTeam.Franchise)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HomeTeam.Franchise)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AwayScore)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HomeScore)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.KickOff)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Season)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Week)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
+
+    </table>
+    @Html.GetPager(Model.Data, Request.RawUrl)
+</div>

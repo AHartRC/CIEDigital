@@ -1,0 +1,123 @@
+﻿@model PagedSearchViewModel<Combine>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>NFL Combines</h2>
+
+<div class="row">
+    @using (Html.BeginForm("Index", "Combines", FormMethod.Get, new { @class = "form-horizontal" }))
+    {
+        @Html.EditorFor(m => m.SearchCriteria)
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary">Apply Filters</button>
+            </div>
+        </div>
+        <hr />
+    }
+</div>
+
+<div class="row">
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    @Html.GetPager(Model.Data, Request.RawUrl)
+    <table class="table">
+        <tr>
+            <th>
+                <a href="@Html.GetSortingUrl(Model.Data, p => p.Position.ShortName, Request.RawUrl)">Position</a>
+            </th>
+            <th>
+                <a href="@Html.GetSortingUrl(Model.Data, p => p.College, Request.RawUrl)">College</a>
+            </th>
+            <th>
+                <a href="@Html.GetSortingUrl(Model.Data, p => p.FirstName, Request.RawUrl)">FirstName</a>
+            </th>
+            <th>
+                <a href="@Html.GetSortingUrl(Model.Data, p => p.HeightInchesTotal, Request.RawUrl)">HeightInchesTotal</a>
+            </th>
+            <th>
+                <a href="@Html.GetSortingUrl(Model.Data, p => p.NFLGrade, Request.RawUrl)">NFLGrade</a>
+            </th>
+            <th>
+                <a href="@Html.GetSortingUrl(Model.Data, p => p.LastName, Request.RawUrl)">LastName</a>
+            </th>
+            <th>
+                <a href="@Html.GetSortingUrl(Model.Data, p => p.Pick, Request.RawUrl)">Pick</a>
+            </th>
+            <th>
+                <a href="@Html.GetSortingUrl(Model.Data, p => p.PickRound, Request.RawUrl)">PickRound</a>
+            </th>
+            <th>
+                <a href="@Html.GetSortingUrl(Model.Data, p => p.PickTotal, Request.RawUrl)">PickTotal</a>
+            </th>
+            <th>
+                <a href="@Html.GetSortingUrl(Model.Data, p => p.Round, Request.RawUrl)">Round</a>
+            </th>
+            <th>
+                <a href="@Html.GetSortingUrl(Model.Data, p => p.WeightPounds, Request.RawUrl)">WeightPounds</a>
+            </th>
+            <th>
+                <a href="@Html.GetSortingUrl(Model.Data, p => p.Wonderlic, Request.RawUrl)">Wonderlic</a>
+            </th>
+            <th>
+                <a href="@Html.GetSortingUrl(Model.Data, p => p.Year, Request.RawUrl)">Year</a>
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.Data)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Position.ShortName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.College)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FirstName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HeightInchesTotal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.NFLGrade)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LastName)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Pick)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PickRound)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.PickTotal)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Round)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.WeightPounds)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Wonderlic)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Year)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
+
+    </table>
+    @Html.GetPager(Model.Data, Request.RawUrl)
+</div>

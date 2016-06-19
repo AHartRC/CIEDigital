@@ -1,0 +1,26 @@
+﻿@model MvcSiteMapProvider.Web.Html.Models.SiteMapNodeModelList
+@using System.Web.Mvc.Html
+@using MvcSiteMapProvider.Web.Html.Models
+
+<ul class="dropdown-menu">
+	@foreach (var node in Model)
+ {
+	 if (node.Title == "Separator")
+	 {
+		<li class="nav-divider"></li>
+	 }
+	 else if (node.Children.Any())
+	 {
+		<li class="dropdown-submenu">
+			@Html.DisplayFor(m => node)
+			@Html.DisplayFor(m => node.Children)
+		</li>
+	 }
+	 else
+	 {
+		<li>
+			@Html.DisplayFor(m => node)
+		</li>
+	 }
+ }
+</ul>

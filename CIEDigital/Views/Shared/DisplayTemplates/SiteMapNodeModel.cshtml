@@ -1,0 +1,41 @@
+﻿@model SiteMapNodeModel
+
+@if (Model.Title == "Separator")
+{
+	<hr class="nav-divider" />
+}
+else if (Model.SourceMetadata["HtmlHelper"].ToString() != "MvcSiteMapProvider.Web.Html.MenuHelper")
+{
+	if (!string.IsNullOrWhiteSpace(Model.Description))
+	{
+	<a href="@Model.Url" title="@Model.Description">@Model.Title</a>
+	}
+	else
+	{
+	<a href="@Model.Url">@Model.Title</a>
+	}
+}
+else if (Model.Children.Any())
+{
+	if (!string.IsNullOrWhiteSpace(Model.Description))
+	{
+	<a href="@Model.Url" class="dropdown-toggle" data-toggle="dropdown" title="@Model.Description">@Model.Title @if (Model.Parent.IsRootNode)
+																											 {<span class="caret"></span>}</a>
+	}
+	else
+	{
+	<a href="@Model.Url" class="dropdown-toggle" data-toggle="dropdown">@Model.Title @if (Model.Parent.IsRootNode)
+																				  {<span class="caret"></span>}</a>
+	}
+}
+else
+{
+	if (!string.IsNullOrWhiteSpace(Model.Description))
+	{
+	<a href="@Model.Url" title="@Model.Description">@Model.Title</a>
+	}
+	else
+	{
+	<a href="@Model.Url">@Model.Title</a>
+	}
+}

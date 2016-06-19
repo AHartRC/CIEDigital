@@ -1,0 +1,127 @@
+ID,Name,City,Franchise,Acronym
+1,Akron Indians,Akron,Indians,AKI
+2,Akron Pros,Akron,Pros,AKR
+3,Arizona Cardinals,Arizona,Cardinals,ARI
+4,Atlanta Falcons,Atlanta,Falcons,ATL
+5,Baltimore Colts,Baltimore,Colts,BAC
+6,Baltimore Ravens,Baltimore,Ravens,BAL
+7,Boston Braves,Boston,Braves,BOB
+8,Boston Bulldogs,Boston,Bulldogs,BOD
+9,Boston Patriots,Boston,Patriots,BOS
+10,Boston Redskins,Boston,Redskins,BOR
+11,Boston Yanks,Boston,Yanks,BOY
+12,Brooklyn Dodgers,Brooklyn,Dodgers,BKD
+13,Brooklyn Horsemen,Brooklyn,Horsemen,BKH
+14,Brooklyn Lions,Brooklyn,Lions,BKL
+15,Brooklyn Tigers,Brooklyn,Tigers,BKT
+16,Brooklyn/Boston Tigers/Yanks,Brooklyn/Boston,Tigers/Yanks,BKB
+17,Buffalo All-Americans,Buffalo,All-Americans,BUA
+18,Buffalo Bills,Buffalo,Bills,BUF
+19,Buffalo Bisons,Buffalo,Bisons,BUS
+20,Buffalo Rangers,Buffalo,Rangers,BUR
+21,Canton Bulldogs,Canton,Bulldogs,CAN
+22,Carolina Panthers,Carolina,Panthers,CAR
+23,Chicago Bears,Chicago,Bears,CHI
+24,Chicago Bulls,Chicago,Bulls,CHB
+25,Chicago Cardinals,Chicago,Cardinals,CHC
+26,Chicago Hornets,Chicago,Hornets,CHH
+27,Chicago Rockets,Chicago,Rockets,CHR
+28,Chicago Staleys,Chicago,Staleys,CHS
+29,Chicago Tigers,Chicago,Tigers,CHT
+30,Chicago/Pittsburgh Bears/Steelers,Chicago/Pittsburgh,Bears/Steelers,CHP
+31,Cincinnati Bengals,Cincinnati,Bengals,CIN
+32,Cincinnati Celts,Cincinnati,Celts,CIC
+33,Cincinnati Reds,Cincinnati,Reds,CIR
+34,Cincinnati/St. Louis Reds/Gunners,Cincinnati-St. Louis,Reds-Gunners,CIS
+35,Cleveland Browns,Cleveland,Browns,CLE
+36,Cleveland Bulldogs,Cleveland,Bulldogs,CLB
+37,Cleveland Indians,Cleveland,Indians,CLD
+38,Cleveland Panthers,Cleveland,Panthers,CLP
+39,Cleveland Rams,Cleveland,Rams,CLR
+40,Cleveland Tigers,Cleveland,Tigers,CLT
+41,Columbus Panhandles,Columbus,Panhandles,COP
+42,Columbus Tigers,Columbus,Tigers,COL
+43,Dallas Cowboys,Dallas,Cowboys,DAL
+44,Dallas Texans,Dallas,Texans,DAT
+45,Dayton Triangles,Dayton,Triangles,DAY
+46,Decatur Staleys,Decatur,Staleys,DEC
+47,Denver Broncos,Denver,Broncos,DEN
+48,Detroit Heralds,Detroit,Heralds,DTH
+49,Detroit Lions,Detroit,Lions,DET
+50,Detroit Panthers,Detroit,Panthers,DTP
+51,Detroit Tigers,Detroit,Tigers,DTG
+52,Detroit Wolverines,Detroit,Wolverines,DTW
+53,Duluth Eskimos,Duluth,Eskimos,DUE
+54,Duluth Kelleys,Duluth,Kelleys,DUK
+55,Evansville Crimson Giants,Evansville,Crimson Giants,EVA
+56,Frankford Yellow Jackets,Frankford,Yellow Jackets,FRA
+57,Green Bay Packers,Green Bay,Packers,GB
+58,Hammond Pros,Hammond,Pros,HAM
+59,Hartford Blues,Hartford,Blues,HAR
+60,Houston Oilers,Houston,Oilers,HOO
+61,Houston Texans,Houston,Texans,HOU
+62,Indianapolis Colts,Indianapolis,Colts,IND
+63,Jacksonville Jaguars,Jacksonville,Jaguars,JAC
+64,Kansas City Blues,Kansas City,Blues,KCB
+65,Kansas City Chiefs,Kansas City,Chiefs,KC
+66,Kansas City Cowboys,Kansas City,Cowboys,KCC
+67,Kenosha Maroons,Kenosha,Maroons,KEN
+68,Los Angeles Buccaneers,Los Angeles,Buccaneers,LAB
+69,Los Angeles Chargers,Los Angeles,Chargers,LAC
+70,Los Angeles Dons,Los Angeles,Dons,LAD
+71,Los Angeles Raiders,Los Angeles,Raiders,LAI
+72,Los Angeles Rams,Los Angeles,Rams,LAM
+73,Los Angeles Wildcats,Los Angeles,Wildcats,LAW
+74,Louisville Brecks,Louisville,Brecks,LOB
+75,Louisville Colonels,Louisville,Colonels,LOC
+76,Miami Dolphins,Miami,Dolphins,MIA
+77,Miami Seahawks,Miami,Seahawks,MIS
+78,Milwaukee Badgers,Milwaukee,Badgers,MIL
+79,Minneapolis Marines,Minneapolis,Marines,MNM
+80,Minneapolis Red Jackets,Minneapolis,Red Jackets,MNR
+81,Minnesota Vikings,Minnesota,Vikings,MIN
+82,Muncie Flyers,Muncie,Flyers,MUN
+83,New England Patriots,New England,Patriots,NE
+84,New Orleans Saints,New Orleans,Saints,NO
+85,New York Brickley Giants,New York,Brickley Giants,NYI
+86,New York Bulldogs,New York,Bulldogs,NYB
+87,New York Giants,New York,Giants,NYG
+88,New York Jets,New York,Jets,NYJ
+89,New York Titans,New York,Titans,NYT
+90,New York Yankees,New York,Yankees,NYY
+91,New York Yanks,New York,Yanks,NYA
+92,Newark Bears,Newark,Bears,NWB
+93,Newark Tornadoes,Newark,Tornadoes,NWK
+94,Oakland Raiders,Oakland,Raiders,OAK
+95,Oorang Indians,Oorang,Indians,OOR
+96,Orange Tornadoes,Orange,Tornadoes,ORG
+97,Philadelphia Eagles,Philadelphia,Eagles,PHI
+98,Philadelphia Quakers,Philadelphia,Quakers,PHQ
+99,Philadelphia/Pittsburgh Eagles/Steelers,Philadelphia/Pittsburgh,Steagles,PHP
+100,Phoenix Cardinals,Phoenix,Cardinals,PHX
+101,Pittsburgh Pirates,Pittsburgh,Pirates,PIP
+102,Pittsburgh Steelers,Pittsburgh,Steelers,PIT
+103,Portsmouth Spartans,Portsmouth,Spartans,POR
+104,Pottsville Maroons,Pottsville,Maroons,POT
+105,Providence Steam Roller,Providence,Steam Roller,PRO
+106,Racine Legion,Racine,Legion,RAL
+107,Racine Tornadoes,Racine,Tornadoes,RAT
+108,Rochester Jeffersons,Rochester,Jeffersons,ROC
+109,Rock Island Independents,Rock Island,Independents,RII
+110,San Diego Chargers,San Diego,Chargers,SD
+111,San Francisco 49ers,San Francisco,49ers,SF
+112,Seattle Seahawks,Seattle,Seahawks,SEA
+113,St. Louis All-Stars,St. Louis,All-Stars,SLA
+114,St. Louis Cardinals,St. Louis,Cardinals,SLC
+115,St. Louis Gunners,St. Louis,Gunners,SLG
+116,St. Louis Rams,St. Louis,Rams,STL
+117,Staten Island Stapletons,Staten Island,Stapletons,SIS
+118,Syracuse Pros,Syracuse,Pros,SYR
+119,Tampa Bay Buccaneers,Tampa Bay,Buccaneers,TB
+120,Tennessee Oilers,Tennessee,Oilers,TNO
+121,Tennessee Titans,Tennessee,Titans,TEN
+122,Toledo Maroons,Toledo,Maroons,TOL
+123,Tonawanda Kardex,Tonawanda,Kardex,TON
+124,Unknown Team,Unknown,Team,UNK
+125,Washington Redskins,Washington,Redskins,WAS
+126,Washington Senators,Washington,Senators,WSN

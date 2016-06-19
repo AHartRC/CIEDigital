@@ -1,0 +1,111 @@
+﻿@model PagedSearchViewModel<Weather>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Weather</h2>
+
+<div class="row">
+    @using (Html.BeginForm("Index", "Weather", FormMethod.Get, new { @class = "form-horizontal" }))
+    {
+        @Html.EditorFor(m => m.SearchCriteria)
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-primary">Apply Filters</button>
+            </div>
+        </div>
+        <hr />
+    }
+</div>
+
+<div class="row">
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    @Html.GetPager(Model.Data, Request.RawUrl)
+    <table class="table">
+        <tr>
+            <th>
+                Away Team
+            </th>
+            <th>
+                Home Team
+            </th>
+            <th>
+                Away Score
+            </th>
+            <th>
+                Date
+            </th>
+            <th>
+                Description
+            </th>
+            <th>
+                Game ID
+            </th>
+            <th>
+                Humidity
+            </th>
+            <th>
+                Home Score
+            </th>
+            <th>
+                Temp
+            </th>
+            <th>
+                Wind Chill
+            </th>
+            <th>
+                Wind (MPH)
+            </th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model.Data)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AwayTeam.Franchise)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HomeTeam.Franchise)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AwayScore)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Date)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.GameID)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Humidity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.HomeScore)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Temperature)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.WindChill)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.WindMPH)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+                </td>
+            </tr>
+        }
+
+    </table>
+    @Html.GetPager(Model.Data, Request.RawUrl)
+</div>

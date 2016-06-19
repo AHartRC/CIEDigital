@@ -1,0 +1,59 @@
+﻿@model MenuHelperModel
+
+<div class="navbar navbar-inverse navbar-fixed-top hidden-print">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navContainer">
+				<span class="sr-only">Toggle Navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a href="~/" class="navbar-brand">AH Operations&nbsp;<i class="glyphicon glyphicon-home"></i></a>
+		</div>
+		<div class="collapse navbar-collapse" id="navContainer">
+			<ul class="nav navbar-nav" role="menu" aria-labelledby="dropdownMenu">
+				@foreach (var node in Model.Nodes)
+	{
+		if (node.Title == "Separator")
+		{
+					<li class="nav-divider"></li>
+		}
+		else if (node.Children.Any())
+		{
+			if (node.IsCurrentNode || node.IsInCurrentPath)
+			{
+					<li class="active dropdown">
+						@Html.DisplayFor(m => node)
+						@Html.DisplayFor(m => node.Children)
+					</li>
+			}
+			else
+			{
+					<li class="dropdown">
+						@Html.DisplayFor(m => node)
+						@Html.DisplayFor(m => node.Children)
+					</li>
+			}
+		}
+		else
+		{
+			if (node.IsCurrentNode || node.IsInCurrentPath)
+			{
+					<li class="active">
+						@Html.DisplayFor(m => node)
+					</li>
+			}
+			else
+			{
+					<li>
+						@Html.DisplayFor(m => node)
+					</li>
+			}
+		}
+	}
+			</ul>
+			@Html.Partial("_LoginPartial")
+		</div>
+	</div>
+</div>

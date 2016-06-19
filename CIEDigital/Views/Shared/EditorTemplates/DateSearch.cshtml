@@ -1,0 +1,31 @@
+﻿@model DateSearch
+
+
+<div class="form-group">
+
+    @Html.LabelFor(m => m.SearchTerm, Model.LabelText, new {@class = "col-sm-2 control-label"})
+    <div class="col-sm-2">
+
+        @Html.EnumDropDownListFor(m => m.Comparator, new {@class = "form-control dateSelect"})
+    </div>
+
+    <div class="col-sm-8 form-inline">
+
+        @Html.TextBoxFor(m => m.SearchTerm, new {@class = "form-control", type = "date"})
+
+
+        @if (Model.Comparator == NumericComparators.InRange)
+        {
+            @Html.TextBoxFor(m => m.SearchTerm2, new {@class = "form-control", type = "date"})
+        }
+        else
+        {
+            @Html.TextBoxFor(m => m.SearchTerm2, new {@class = "form-control", type = "date", style = "display:none;"})
+        }
+    </div>
+
+
+    @Html.HiddenFor(m => m.Property)
+    @Html.HiddenFor(m => m.TargetTypeName)
+    @Html.Hidden("ModelTypeName", Model.GetType().AssemblyQualifiedName)
+</div>
